@@ -19,8 +19,8 @@ public class App {
     public static void main(String[] args) throws IOException {
 
 
-        if(args!=null && args.length>0 && args[0].equals("-f")){
-            Path path = Paths.get(args[1]);
+        if(args!=null && args.length>0 && args[0]!=null){
+            Path path = Paths.get(args[0]);
             readFromFile(path);
         }else{
             runInteractiveShell();
@@ -138,7 +138,6 @@ public class App {
                     throw new Exception("Command not recognized");
             }
         }catch(Exception e) {
-            e.printStackTrace();
             System.out.println(e.getMessage());
         }
         return exit;

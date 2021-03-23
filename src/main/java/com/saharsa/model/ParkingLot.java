@@ -106,12 +106,15 @@ public class ParkingLot {
      * Gives a summary of the ParkingLot's occupied ParkingSpot's
      * @throws Exception Throws exception if ParkingLot not created
      */
-    public void status() throws Exception {
+    public Map<Integer, ParkingSpot> status() throws Exception {
 
         checkParkingLot();
 
-        System.out.println("Slot No.\tRegistration No.\t\tColor");
-        this.occupiedSpots.forEach((spotId, spot) -> System.out.println(spotId+"\t\t\t"+spot.getVehicle().getRegistrationNumber()+"\t\t\t"+spot.getVehicle().getColor()));
+        if(this.occupiedSpots.isEmpty()) {
+            throw new Exception("Parking lot is empty");
+        }
+
+        return this.occupiedSpots;
     }
 
     /**

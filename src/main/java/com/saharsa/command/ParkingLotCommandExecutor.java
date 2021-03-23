@@ -5,6 +5,7 @@ import com.saharsa.model.ParkingSpot;
 import com.saharsa.model.Vehicle;
 
 import java.util.List;
+import java.util.Map;
 
 public class ParkingLotCommandExecutor {
 
@@ -88,7 +89,9 @@ public class ParkingLotCommandExecutor {
     }
 
     public static void status() throws Exception {
-        parkingLot.status();
+        Map<Integer, ParkingSpot> occupiedSpots = parkingLot.status();
+        System.out.println("Slot No.\tRegistration No.\t\tColor");
+        occupiedSpots.forEach((spotId, spot) -> System.out.println(spotId+"\t\t\t"+spot.getVehicle().getRegistrationNumber()+"\t\t\t"+spot.getVehicle().getColor()));
     }
 
     public static void getSpotByRegistrationNumber(String ...arguments) throws Exception {

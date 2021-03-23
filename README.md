@@ -11,6 +11,6 @@ bin/setup.sh
 ###### Execute
 
 ```
-bin/parkin_lot.sh <filename|optional>
+bin/parking_lot.sh <filepath|optional>
 ```
 

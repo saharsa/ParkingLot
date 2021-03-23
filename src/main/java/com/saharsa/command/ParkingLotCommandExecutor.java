@@ -1,8 +1,8 @@
 package com.saharsa.command;
 
-import com.saharsa.ParkingLot;
-import com.saharsa.ParkingSpot;
-import com.saharsa.Vehicle;
+import com.saharsa.model.ParkingLot;
+import com.saharsa.model.ParkingSpot;
+import com.saharsa.model.Vehicle;
 
 import java.util.List;
 

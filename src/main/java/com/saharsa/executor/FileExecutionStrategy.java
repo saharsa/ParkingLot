@@ -1,6 +1,5 @@
 package com.saharsa.executor;
 
-import com.saharsa.ParkingLot;
 import com.saharsa.command.ParkingLotCommandExecutor;
 
 import java.io.BufferedReader;

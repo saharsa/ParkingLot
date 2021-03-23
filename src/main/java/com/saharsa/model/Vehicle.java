@@ -1,4 +1,4 @@
-package com.saharsa;
+package com.saharsa.model;
 
 import java.util.Objects;
 

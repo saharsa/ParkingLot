@@ -31,7 +31,6 @@ public class ParkingLot {
     public void createParkingLot(int totalSpots) throws Exception {
         if(!created) {
             this.initializeParkingLot(totalSpots);
-            System.out.println("Parking lot created");
             return;
         }
         throw new Exception("Parking lot already created");
@@ -75,7 +74,6 @@ public class ParkingLot {
         ParkingSpot parkingSpot = new ParkingSpot(spotId);
         parkingSpot.assignVehicle(vehicle);
         occupiedSpots.put(spotId, parkingSpot);
-        System.out.println("Allocated slot number: "+spotId);
         return parkingSpot;
     }
 
@@ -100,7 +98,6 @@ public class ParkingLot {
 
         parkingSpot.removeVehicle();
         freeSpot(parkingSpot);
-        System.out.println("Slot number "+parkingSpot.getSpotId()+" is free");
 
         return parkingSpot;
     }
